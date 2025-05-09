@@ -1,0 +1,13 @@
+[Unit]
+Description=NudgeEngine .NET App
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/dotnet /opt/nudgeengine/NudgeEngine.dll
+WorkingDirectory=/opt/nudgeengine
+Restart=always
+RestartSec=5
+User=root
+
+[Install]
+WantedBy=multi-user.target
