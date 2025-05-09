@@ -1,0 +1,13 @@
+[Unit]
+Description=NudgeEngine Service
+After=network.target
+
+[Service]
+ExecStart=/opt/nudgeengine/src/run.sh
+WorkingDirectory=/opt/nudgeengine
+Restart=always
+RestartSec=5
+User=root
+
+[Install]
+WantedBy=multi-user.target
